@@ -1,0 +1,134 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<style>
+    header{
+        background: lightgreen;
+    }
+
+    nav{
+        position: relative;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+    }
+
+    nav img{
+        width: 180px;
+        height: 150px;
+        position: absolute;
+        left: 20;
+    }
+
+    nav h1{
+        font-size: 40px;
+        margin-top: 30px;
+    }
+
+    @media(max-width:700px){
+        nav h1{
+            font-size: 30px;
+            position: absolute;
+            right: 20;
+        }
+
+        nav img{
+            width: 120px;
+            height: 100px;
+        }
+    }
+
+    @media(max-width:550px){
+        input[type="text"]{
+            font-size: 10px !important;
+        }
+
+        .submit_btn{
+            width: 40px !important;
+            height: 40px !important;
+        }
+
+        .card{
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+
+    }
+
+    @media(max-width:420px){
+        nav h1{
+            font-size: 20px;
+            position: absolute;
+            right: 20;
+        }
+
+        nav img{
+            width: 100px;
+            height: 80px;
+        }
+    }
+</style>
+
+<body>
+
+    <header>
+        <nav>
+<img src="logo.png" alt="">
+            <h1>Joetex Weather</h1>
+        </nav>
+    </header>
+
+    <div class="card" style="max-width: 900px;">
+        <div class="search" style="width: 100%;">
+            <form action="" method="post" id="form" style="display: flex; column-gap: 40px; width: 100%;">
+            <input type="text" name="" id="" placeholder="Enter country/City name" spellcheck="false" style="width: 100%; font-size: 23px;">
+            <button type="submit" style="height: 50px; width: 50px;" class="submit_btn">
+                <img src="search.png">
+            </button>
+            </form>
+        </div>
+
+        <div class="error">
+            <p>Invalid Country/City name!</p>
+        </div>
+
+        <div class="error_msg">
+            <p>No internet connection!</p>
+        </div>
+
+        <div class="weather">
+            <img src="sun.png" class="weather-icon">
+            <h1 class="temp">22°C</h1>
+            <h2 class="city">Nigeria </h2>
+            <div class="details">
+                <div class="col">
+                    <span>~~~~</span>
+                    <div>
+                        <p>Humidity</p>
+                        <p class="humidity">50%</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img src="wind.png" id="wind">
+                    <div>
+                        <p>Wind speed</p>
+                        <p class="wind">10 km/h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
