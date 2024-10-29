@@ -116,3 +116,11 @@ span {
   margin-top: 10px;
   display: none;
 }
+
+@media(max-width:435px){
+  .details{
+    flex-direction:column !important;
+    row-gap: 30px !important;
+    margin-top: 20px !important;
+  }
+}
