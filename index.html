@@ -14,20 +14,65 @@
     }
 
     nav{
+        position: relative;
+        justify-content: center;
         display: flex;
-        column-gap: 500px;
-        padding: 20px;
+        width: 100%;
     }
 
     nav img{
-        width: 150px;
-        height: 100px;
-        border-radius: 20px;
+        width: 180px;
+        height: 150px;
+        position: absolute;
+        left: 20;
     }
 
     nav h1{
         font-size: 40px;
-        margin-top: 40px;
+        margin-top: 30px;
+    }
+
+    @media(max-width:700px){
+        nav h1{
+            font-size: 30px;
+            position: absolute;
+            right: 20;
+        }
+
+        nav img{
+            width: 120px;
+            height: 100px;
+        }
+    }
+
+    @media(max-width:550px){
+        input[type="text"]{
+            font-size: 10px !important;
+        }
+
+        .submit_btn{
+            width: 40px !important;
+            height: 40px !important;
+        }
+
+        .card{
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+
+    }
+
+    @media(max-width:420px){
+        nav h1{
+            font-size: 20px;
+            position: absolute;
+            right: 20;
+        }
+
+        nav img{
+            width: 100px;
+            height: 80px;
+        }
     }
 </style>
 
@@ -35,17 +80,19 @@
 
     <header>
         <nav>
-<img src="weather.jpg" alt="">
-            <h1>Weather App</h1>
+<img src="logo.png" alt="">
+            <h1>Joetex Weather</h1>
         </nav>
     </header>
 
-    <div class="card">
-        <div class="search">
-            <input type="text" name="" id="" placeholder="Enter country/City name" spellcheck="false">
-            <button>
+    <div class="card" style="max-width: 900px;">
+        <div class="search" style="width: 100%;">
+            <form action="" method="post" id="form" style="display: flex; column-gap: 40px; width: 100%;">
+            <input type="text" name="" id="" placeholder="Enter country/City name" spellcheck="false" style="width: 100%; font-size: 23px;">
+            <button type="submit" style="height: 50px; width: 50px;" class="submit_btn">
                 <img src="search.png">
             </button>
+            </form>
         </div>
 
         <div class="error">
